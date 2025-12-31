@@ -26,7 +26,7 @@ A full-stack User Management System that supports authentication, role-based aut
 ## Live Deployments
 - **Frontend:** `https://backend-intern-assessment-sachin-ku.vercel.app`
 - **Backend API:** `https://backend-intern-assessment-sachin-kumar.onrender.com/api/health`
-- **Postman Collection / API Docs:** [API Doc URL]
+- **Postman Collection / API Docs:** `https://www.postman.com/technical-cosmonaut-48522133/sachin-s-collection/documentation/42956865-b2dd1704-9e02-4aa4-b164-b7f08a7bca8e`
 > Backend is protected by CORS, so it is only accessible from the frontend URL only
 
 ## Setup Instructions
