@@ -108,7 +108,6 @@ export const changePassword = async (req, res, next) => {
       throw new Error("Password must be at least 8 characters");
     }
 
-    // 🔥 Re-fetch user WITH password
     const user = await User.findById(req.user._id).select("+password");
 
     if (!user) {
@@ -123,7 +122,7 @@ export const changePassword = async (req, res, next) => {
       throw new Error("Incorrect current password");
     }
 
-    user.password = newPassword; // hashed by pre-save hook
+    user.password = newPassword;
     await user.save();
 
     return successResponse(res, "Password updated successfully");
@@ -151,6 +150,7 @@ export const requestAdminAccess = async (req, res, next) => {
     }
 
     req.user.role = "admin";
+    req.user.status = "active";
     await req.user.save();
 
     return successResponse(res, "Admin access granted", {
